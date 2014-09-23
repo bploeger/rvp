@@ -11,8 +11,9 @@ h4 .small,
 h5 .small,
 h6 .small {
   line-height: 1;
-  color: #999999;
+  color: #333;
   font-weight: 700;
+  vertical-align: middle;
 }
 
 
