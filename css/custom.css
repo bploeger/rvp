@@ -130,3 +130,6 @@ img.centered {
   .social-em:hover {
     color: #f39c12;
   }
+h6, .h6 {
+font-size: 21px;
+}
