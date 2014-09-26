@@ -1,14 +1,19 @@
 var taReviews = null;
 //AngularJS Controllers
-function reviewCtrl($scope, $http) {
+function reviewCtrl($scope, $resource) {
   
   $scope.reviewFld = "";
   $scope.reviewAuthor = "";
   $scope.reviewStars = "";
 
-  var taAPIurl = "http://api.tripadvisor.com/api/partner/2.0/location/1145019?key=42cc155371794d1eb2d922da2de694c3";
+  var taAPI = $resource("http://api.tripadvisor.com/api/partner/2.0/location/1145019?key=42cc155371794d1eb2d922da2de694c3",
+                { callback: "JSON_CALLBACK" },
+                { get: {method: "JSONP"}};
 
- $scope.reviews = [
+  $scope.reviews = taAPI.get();
+
+
+ /*$scope.reviews = [
     {
       text: "We stayed in one of the cabins and it was very clean and had some linens as well as kitchenware which was surprising. The overall campground was very clean and the pool area was wonderful for the kids. It was nice to have a small pool setup just for the little kids along with a larger pool and hot tub. They also had a large chess/checkers board, bounce pad, and other activities. The staff was very helpful in recommending a horseback riding trip and wanted to know if it went well for us afterwards.",
       author: "Trip Advisor User",
@@ -20,7 +25,7 @@ function reviewCtrl($scope, $http) {
       stars: "4",
       done:"false"
     }
-  ];
+  ];*/
 
   $scope.addReview = function () {
     
