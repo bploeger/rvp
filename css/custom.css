@@ -49,7 +49,7 @@ html, body, h1, h2, h3, h4, h5, h6 {
 }
 
 .header-hero {
-  padding: 0px;
+  padding: 40px;
   overflow: hidden;
   background-image: url('http://wex.arkturis.com/lonestar/img/slides/6.jpg');
   background-repeat: no-repeat;
@@ -208,3 +208,7 @@ font-size: 21px;
 margin-bottom: 20px;
 border: 4px solid #6eb644;
 border-radius: 16px;
+}
+.navbar {
+margin-bottom: -25px;
+}
