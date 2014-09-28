@@ -17,8 +17,10 @@ app.controller('ReviewCtrl', function($scope, $resource, TAReviews) {
 });
 
 app.controller('FBCtrl', function($scope, $resource, FBid) {
+    $scope.fbpage = null;
     FBid.get({name: 'codykoa'}, function(data) {
-    console.log(data.id); 
+      console.log(data);
+      $scope.fbpage = data;
   });
 });
 
@@ -31,10 +33,6 @@ app.controller('FBCtrl', function($scope, $resource, FBid) {
         e.preventDefault()
       $(this).tab('show')
     });
-    $('#map a').click(function (e) {
-        e.preventDefault()
-      $(this).tab('show')
-    });
     $('#social a').click(function (e) {
         e.preventDefault()
       $(this).tab('show')
@@ -43,3 +41,20 @@ app.controller('FBCtrl', function($scope, $resource, FBid) {
         e.preventDefault()
       $(this).tab('show')
     });
+
+window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '445464698925742',
+      xfbml      : true,
+      version    : 'v2.1'
+    });
+};
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+
