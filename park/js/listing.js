@@ -41,6 +41,10 @@ app.controller('FBCtrl', function($scope, $resource, FBid) {
         e.preventDefault()
       $(this).tab('show')
     });
+    $('#forum a').click(function (e) {
+        e.preventDefault()
+      $(this).tab('show')
+    });
 
 window.fbAsyncInit = function() {
     FB.init({
