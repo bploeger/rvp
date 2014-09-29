@@ -18,7 +18,8 @@ app.controller('ReviewCtrl', function($scope, $resource, TAReviews) {
 
 app.controller('FBCtrl', function($scope, $resource, FBid) {
     $scope.fbpage = null;
-    FBid.get({name: 'codykoa'}, function(data) {      
+    FBid.get({name: 'codykoa'}, function(data) {
+      console.log(data);
       $scope.fbpage = data;
   });
 });
@@ -44,8 +45,6 @@ app.controller('FBCtrl', function($scope, $resource, FBid) {
         e.preventDefault()
       $(this).tab('show')
     });
-
-//Facebook Functions
 
 window.fbAsyncInit = function() {
     FB.init({
