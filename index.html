@@ -32,87 +32,44 @@
     </button>
     <a class="navbar-brand" href="#"><img src="http://wex.arkturis.com/lonestar/img/logo_small.png" class="img-responsive" /></a>
   </div>
-  <div class="collapse navbar-collapse js-navbar-collapse">
-    <ul class="nav navbar-nav">
-      <li class="dropdown mega-dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Main Menu<span class="glyphicon glyphicon-chevron-down pull-right"></span></a>
-        
-        <ul class="dropdown-menu mega-dropdown-menu row">
-          <li class="col-sm-3">
-            <ul>
-              <li class="dropdown-header">Featured Parks</li>                            
-                            <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                              <div class="carousel-inner">
-                                <div class="item active">
-                                    <a href="http://wex.arkturis.com/lonestar/park/17773.html"><img src="http://wex.arkturis.com/lonestar/park/media/1.jpg" width="254" height="150" alt="product 1"></a>
-                                    <h4><small>Cody / Yellowstone KOA</small></h4>                                        
-                                    <button class="btn btn-primary" type="button">$999</button> <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-tree-conifer"></span>More Info</button>       
-                                </div><!-- End Item -->
-                                <div class="item">
-                                    <a href="#"><img src="http://placehold.it/254x150/7f6f3e/f5f5f5/&text=Featured+Parks" class="img-responsive" alt="product 2"></a>
-                                    <h4><small>Blank</small></h4>                                        
-                                    <button class="btn btn-primary" type="button">$999</button> <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-tree-conifer"></span>Blank</button>        
-                                </div><!-- End Item -->
-                                <div class="item">
-                                    <a href="#"><img src="http://placehold.it/254x150/fbc019/f5f5f5/&text=Featured+Parks" class="img-responsive" alt="product 3"></a>
-                                    <h4><small>Blank</small></h4>                                        
-                                    <button class="btn btn-primary" type="button">$999</button> <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-tree-conifer"></span>Blank</button>      
-                                </div><!-- End Item -->                                
-                              </div><!-- End Carousel Inner -->
-                            </div><!-- /.carousel -->
-                            <li class="divider"></li>
-                            <li><a href="#">View all Parks <span class="glyphicon glyphicon-chevron-right pull-right"></span></a></li>
-            </ul>
-          </li>
-          <li class="col-sm-3">
-            <ul>
-              <li class="dropdown-header">How It Works</li>
-              <li><a href="#">Blank</a></li>
-              <li><a href="#">Blank</a></li>
-              <li><a href="#">Blank</a></li>
-              <li class="divider"></li>
-              <li class="dropdown-header">Find a Park</li>
-              <li><a href="#">By Zip Code</a></li>
-              <li><a href="#">By City</a></li>
-              <li><a href="#">By State</a></li>               
-            </ul>
-          </li>
-          <li class="col-sm-3">
-            <ul>
-              <li class="dropdown-header">General FAQs</li>
-              <li><a href="#">Blank</a></li>
-              <li><a href="#">Blank</a></li>
-              <li><a href="#">Blank</a></li>
-              <li class="divider"></li>
-              <li class="dropdown-header">Campground Owner FAQs</li>
-              <li><a href="#">Blank</a></li>
-              <li><a href="#">Blank</a></li>
-              <li><a href="#">Blank</a></li>
-            </ul>
-          </li>
-          <li class="col-sm-3">
-            <ul>
-              <li class="dropdown-header">Local Business Owner FAQs</li>
-              <li><a href="#">Blank</a></li>
-              <li><a href="#">Blank</a></li>
-              <li><a href="#">Blank</a></li>             
-              <li class="divider"></li>
-                            <li class="dropdown-header">Sign Up For Savings</li>
-                            <form class="form" role="form">
-                              <div class="form-group">
-                                <label class="sr-only" for="email">Email address</label>
-                                <input type="email" class="form-control" id="email" placeholder="Enter email">                                                              
-                              </div>
-                              <button type="submit" class="btn btn-primary btn-block">Sign in</button>
-                            </form>                                                       
-            </ul>
-          </li>
-        </ul>
-        
-      </li>
-    </ul>
-    
-  </div><!-- /.nav-collapse -->
+  <div class="container">
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+            <div class="panel with-nav-tabs panel-default">
+                <div class="panel-heading">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#tab1default" data-toggle="tab">How It Works</a></li>
+                            <li class="dropdown">
+                                <a href="#" data-toggle="dropdown">Find a Park <span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#tab4default" data-toggle="tab">By Postal Code</a></li>
+                                    <li><a href="#tab5default" data-toggle="tab">By City</a></li>
+                                    <li><a href="#tab5default" data-toggle="tab">By State or Province</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" data-toggle="dropdown">FAQs<span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#tab2default" data-toggle="tab">General FAQs</a></li>
+                                    <li><a href="#tab3default" data-toggle="tab">Campground Owner FAQs</a></li>
+                                    <li><a href="#tab3default" data-toggle="tab">Local Business Owner FAQs</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                </div>
+                <div class="panel-body">
+                    <div class="tab-content">
+                        <div class="tab-pane fade in active" id="tab1default">Default 1</div>
+                        <div class="tab-pane fade" id="tab2default">Default 2</div>
+                        <div class="tab-pane fade" id="tab3default">Default 3</div>
+                        <div class="tab-pane fade" id="tab4default">Default 4</div>
+                        <div class="tab-pane fade" id="tab5default">Default 5</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div><!-- /.nav-collapse -->
 </nav>
 <div class="container-fluid">
   <div class="row">
