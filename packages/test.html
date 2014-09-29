@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8">
+    <title>
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"
+    rel="stylesheet">
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"
+    rel="stylesheet">
+  
+    <link href="css/screen-b484a40a35.css" rel="stylesheet">
+
+    <style>
+
+    #map_canvas {
+        width:100%;
+        /*height:calc(80% - 0);*/
+        height: 500px;
+        position:relative;
+        overflow:hidden;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right:0;
+    }
+
+    .navbar {
+      padding-bottom: 10px;
+    }
+
+    .whitespace {
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
+
+    .dark-gray {
+      background-color: #444;
+      text-align: center;
+      vertical-align: middle;
+      color: #ddd;
+      padding: 50px;
+    }
+
+    .header-hero {
+      padding: 0px;
+      overflow: hidden;
+    }
+
+    #gkTopBar {
+      background: #eee;
+      color: beige;
+      text-shadow: 3px 3px 5px #000;
+      height: 110px;
+      line-height: 90px;
+      text-align: right;
+      overflow: hidden;
+      -webkit-transition: all .35s linear;
+      -moz-transition: all .35s linear;
+      -ms-transition: all .35s linear;
+      -o-transition: all .35s linear;
+      transition: all .35s linear;
+      position: fixed;
+      z-index: 200;
+      box-shadow: -3px -2px 2px 6px #333;
+    }
+    </style>
+</head>
+  
+  <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    </script>
+<div class="container">   
+    <div class="row" id="gkTopBar">
+       <img src="http://wex.arkturis.com/lonestar/img/logo_small.png" class="img-responsive">
+    </div>
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12 header-hero">
+      <img src="http://wex.arkturis.com/lonestar/img/slides/1.jpg" />
+    </div>  
+  </div>
+</div>
+<div class="container">
+  <div class="row whitespace text-center">
+      <div class="col-xs-4"> <h3>Over 10,000 parks</h3> Across the United States and Canada </div>
+      <div class="col-xs-4"> <h3>No traveler fees</h3> Save money enjoying the outdoors </div>
+      <div class="col-xs-4"> <h3>Stay with confidence</h3> See reviews by other travelers </div>
+  </div>
+  <div class="row whitespace text-center">
+      <div class="col-xs-12"> <h2>Showcased Parks</h2></div>
+  </div>
+<div class="col-xs-4"> 
+      <div class="text-center"><img src="http://placehold.it/900x300" class="img-responsive" /></div><p><strong>Header</strong></p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec magna massa, sollicitudin sed justo in, egestas vestibulum felis. Mauris semper eros vel turpis fermentum vestibulum. Sed a massa pretium, lobortis arcu vel, volutpat quam. Quisque maximus, erat sit amet placerat pellentesque, nisl lorem aliquam tellus, non commodo libero est in tortor. Sed enim lacus, interdum sed arcu in, vulputate maximus magna. Curabitur massa diam, vehicula sit amet pretium a, dignissim id ante.</p> 
+    </div>
+    <div class="col-xs-4"> 
+      <div class="text-center"><img src="http://placehold.it/900x300" class="img-responsive" /></div><p><strong>Header</strong></p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec magna massa, sollicitudin sed justo in, egestas vestibulum felis. Mauris semper eros vel turpis fermentum vestibulum. Sed a massa pretium, lobortis arcu vel, volutpat quam. Quisque maximus, erat sit amet placerat pellentesque, nisl lorem aliquam tellus, non commodo libero est in tortor. Sed enim lacus, interdum sed arcu in, vulputate maximus magna. Curabitur massa diam, vehicula sit amet pretium a, dignissim id ante.</p> 
+    </div>
+    <div class="col-xs-4"> 
+      <div class="text-center"><img src="http://placehold.it/900x300" class="img-responsive" /></div><p><strong>Header</strong></p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec magna massa, sollicitudin sed justo in, egestas vestibulum felis. Mauris semper eros vel turpis fermentum vestibulum. Sed a massa pretium, lobortis arcu vel, volutpat quam. Quisque maximus, erat sit amet placerat pellentesque, nisl lorem aliquam tellus, non commodo libero est in tortor. Sed enim lacus, interdum sed arcu in, vulputate maximus magna. Curabitur massa diam, vehicula sit amet pretium a, dignissim id ante.</p> 
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12 text-center whitespace"> <h2>WHERE DO YOU WANT TO GO TODAY?</h2> </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12" id="map_canvas"> </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 text-center whitespace"> <h2>TRAVEL IDEAS</h2> </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-4"> 
+      <div class="text-center"><img src="http://placehold.it/900x300" class="img-responsive" /></div><p><strong>Header</strong></p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec magna massa, sollicitudin sed justo in, egestas vestibulum felis. Mauris semper eros vel turpis fermentum vestibulum. Sed a massa pretium, lobortis arcu vel, volutpat quam. Quisque maximus, erat sit amet placerat pellentesque, nisl lorem aliquam tellus, non commodo libero est in tortor. Sed enim lacus, interdum sed arcu in, vulputate maximus magna. Curabitur massa diam, vehicula sit amet pretium a, dignissim id ante.</p> 
+    </div>
+    <div class="col-xs-4"> 
+      <div class="text-center"><img src="http://placehold.it/900x300" class="img-responsive" /></div><p><strong>Header</strong></p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec magna massa, sollicitudin sed justo in, egestas vestibulum felis. Mauris semper eros vel turpis fermentum vestibulum. Sed a massa pretium, lobortis arcu vel, volutpat quam. Quisque maximus, erat sit amet placerat pellentesque, nisl lorem aliquam tellus, non commodo libero est in tortor. Sed enim lacus, interdum sed arcu in, vulputate maximus magna. Curabitur massa diam, vehicula sit amet pretium a, dignissim id ante.</p> 
+    </div>
+    <div class="col-xs-4"> 
+      <div class="text-center"><img src="http://placehold.it/900x300" class="img-responsive" /></div><p><strong>Header</strong></p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec magna massa, sollicitudin sed justo in, egestas vestibulum felis. Mauris semper eros vel turpis fermentum vestibulum. Sed a massa pretium, lobortis arcu vel, volutpat quam. Quisque maximus, erat sit amet placerat pellentesque, nisl lorem aliquam tellus, non commodo libero est in tortor. Sed enim lacus, interdum sed arcu in, vulputate maximus magna. Curabitur massa diam, vehicula sit amet pretium a, dignissim id ante.</p> 
+    </div>
+  </div>
+  <div class="row whitespace">
+    <div class="col-xs-12">&nbsp;</div>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12 dark-gray">Arkturis is awesome.</div>
+  </div> 
+</div>  
+  </body>
+
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBL7rJ65yT9EFqKFBm4ioeK2xQrEjJ5dZU"></script>
+  <script type="text/javascript" src="http://wex.arkturis.com/lonestar/js/maps.js"> </script>
+
+</html>
